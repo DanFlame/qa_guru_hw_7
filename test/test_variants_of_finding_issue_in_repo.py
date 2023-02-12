@@ -12,6 +12,7 @@ from selene.support.shared import browser
 @allure.feature('Issues list in repository')
 @allure.description('We should check that issues are visible')
 @allure.story('Finding issue with special name for this pure selene test')
+@allure.link('https://github.com/DanFlame/qa_guru_hw_7/tree/main/test', name='Test directory')
 def test_github_issue_finding_with_selene():
     browser.open('https://github.com/')
     browser.element('.header-search-input').click()
@@ -29,6 +30,7 @@ def test_github_issue_finding_with_selene():
 @allure.feature('Issues list in repository')
 @allure.description('We should check that issues are visible')
 @allure.story('Finding issue with special name for this test with lambda steps')
+@allure.link('https://github.com/DanFlame/qa_guru_hw_7/tree/main/test', name='Test directory')
 def test_github_issue_finding_with_lambda_steps():
     with allure.step('Open Github main page'):
         browser.open('https://github.com/')
@@ -59,6 +61,7 @@ def test_github_issue_finding_with_lambda_steps():
 @allure.feature('Issues list in repository')
 @allure.description('We should check that issues are visible')
 @allure.story('Finding issue with special name for this test with decorator')
+@allure.link('https://github.com/DanFlame/qa_guru_hw_7/tree/main/test', name='Test directory')
 def test_github_issue_finding_with_decorator():
     open_main_github_page()
     search_input_click()
